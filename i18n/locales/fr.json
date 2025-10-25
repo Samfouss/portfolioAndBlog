@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "blog": "Blog",
+    "contact": "Contact",
+    "dataScience": "Science des données",
+    "bioinformatics": "Bioinformatique"
+  },
+  "home": {
+    "title": "Science des données et Bioinformatique",
+    "subtitle": "Explorer l'intersection entre la biologie computationnelle et la science des données pour débloquer des insights à partir de données biologiques complexes et faire avancer la découverte scientifique.",
+    "learnMore": "En savoir plus sur moi",
+    "getInTouch": "Me contacter",
+    "featuredWork": "Travaux en vedette",
+    "featuredWorkSubtitle": "Projets récents et recherches en science des données et bioinformatique",
+    "dataScienceTitle": "Science des données",
+    "dataScienceDescription": "Modèles d'apprentissage automatique, analyse statistique et techniques de visualisation de données pour des ensembles de données biologiques et cliniques.",
+    "dataScienceLink": "Explorer les articles de science des données →",
+    "bioinformaticsTitle": "Bioinformatique",
+    "bioinformaticsDescription": "Analyse génomique, alignement de séquences, études phylogénétiques et approches computationnelles aux problèmes biologiques.",
+    "bioinformaticsLink": "Explorer les articles de bioinformatique →",
+    "skillsTitle": "Compétences et expertise",
+    "skillsSubtitle": "Technologies et méthodologies avec lesquelles je travaille",
+    "programming": "Programmation",
+    "programmingSkills": "Python, R, JavaScript, SQL",
+    "dataAnalysis": "Analyse de données",
+    "dataAnalysisSkills": "Pandas, NumPy, Scikit-learn, Bioconductor",
+    "machineLearning": "Apprentissage automatique",
+    "machineLearningSkills": "TensorFlow, PyTorch, Apprentissage profond"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "subtitle": "Passionné par le rapprochement entre la biologie et l'informatique",
+    "background": "Contexte",
+    "backgroundText": "Je suis un biologiste computationnel passionné par l'extraction d'insights significatifs à partir de données biologiques complexes. Mon travail s'étend à travers la génomique, la protéomique et la biologie des systèmes, utilisant des techniques de science des données de pointe pour répondre aux questions fondamentales en sciences de la vie.",
+    "researchInterests": "Intérêts de recherche",
+    "researchInterestsList": [
+      "Analyse et interprétation de données génomiques",
+      "Applications de l'apprentissage automatique en biologie",
+      "Analyse phylogénétique et évolution",
+      "Découverte et validation de biomarqueurs",
+      "Intégration de données multi-omiques"
+    ],
+    "educationExperience": "Formation et expérience",
+    "educationExperienceText": "Avec une solide base en informatique et en biologie, j'apporte une perspective unique à la recherche interdisciplinaire. Mon expérience inclut le travail avec de grands ensembles de données génomiques, le développement de pipelines computationnels et la collaboration avec des chercheurs de laboratoire humide pour traduire les découvertes computationnelles en insights biologiques.",
+    "technicalSkills": "Compétences techniques",
+    "toolsTechnologies": "Outils et technologies"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Entrez en contact avec moi",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer le message"
+    }
+  },
+  "blog": {
+    "dataScience": "Science des données",
+    "bioinformatics": "Bioinformatique",
+    "readMore": "Lire la suite",
+    "backToBlog": "Retour au blog"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "notFound": "Page non trouvée"
+  }
+}

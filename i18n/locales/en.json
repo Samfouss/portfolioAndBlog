@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "dataScience": "Data Science",
+    "bioinformatics": "Bioinformatics"
+  },
+  "home": {
+    "title": "Data Science & Bioinformatics",
+    "subtitle": "Exploring the intersection of computational biology and data science to unlock insights from complex biological data and drive scientific discovery.",
+    "learnMore": "Learn More About Me",
+    "getInTouch": "Get In Touch",
+    "featuredWork": "Featured Work",
+    "featuredWorkSubtitle": "Recent projects and research in data science and bioinformatics",
+    "dataScienceTitle": "Data Science",
+    "dataScienceDescription": "Machine learning models, statistical analysis, and data visualization techniques for biological and clinical datasets.",
+    "dataScienceLink": "Explore Data Science Posts →",
+    "bioinformaticsTitle": "Bioinformatics",
+    "bioinformaticsDescription": "Genomic analysis, sequence alignment, phylogenetic studies, and computational approaches to biological problems.",
+    "bioinformaticsLink": "Explore Bioinformatics Posts →",
+    "skillsTitle": "Skills & Expertise",
+    "skillsSubtitle": "Technologies and methodologies I work with",
+    "programming": "Programming",
+    "programmingSkills": "Python, R, JavaScript, SQL",
+    "dataAnalysis": "Data Analysis",
+    "dataAnalysisSkills": "Pandas, NumPy, Scikit-learn, Bioconductor",
+    "machineLearning": "Machine Learning",
+    "machineLearningSkills": "TensorFlow, PyTorch, Deep Learning"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Passionate about bridging the gap between biology and computation",
+    "background": "Background",
+    "backgroundText": "I'm a computational biologist with a passion for extracting meaningful insights from complex biological data. My work spans across genomics, proteomics, and systems biology, utilizing cutting-edge data science techniques to address fundamental questions in life sciences.",
+    "researchInterests": "Research Interests",
+    "researchInterestsList": [
+      "Genomic data analysis and interpretation",
+      "Machine learning applications in biology",
+      "Phylogenetic analysis and evolution",
+      "Biomarker discovery and validation",
+      "Multi-omics data integration"
+    ],
+    "educationExperience": "Education & Experience",
+    "educationExperienceText": "With a strong foundation in both computer science and biology, I bring a unique perspective to interdisciplinary research. My experience includes working with large-scale genomic datasets, developing computational pipelines, and collaborating with wet-lab researchers to translate computational findings into biological insights.",
+    "technicalSkills": "Technical Skills",
+    "toolsTechnologies": "Tools & Technologies"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch with me",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "blog": {
+    "dataScience": "Data Science",
+    "bioinformatics": "Bioinformatics",
+    "readMore": "Read More",
+    "backToBlog": "Back to Blog"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found"
+  }
+}

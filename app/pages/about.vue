@@ -2,44 +2,35 @@
   <div class="py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">About Me</h1>
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">{{ $t('about.title') }}</h1>
         <p class="text-xl text-gray-600 dark:text-gray-300">
-          Passionate about bridging the gap between biology and computation
+          {{ $t('about.subtitle') }}
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <div class="lg:col-span-2">
           <div class="prose-custom">
-            <h2>Background</h2>
+            <h2>{{ $t('about.background') }}</h2>
             <p>
-              I'm a computational biologist with a passion for extracting meaningful insights from complex biological data. 
-              My work spans across genomics, proteomics, and systems biology, utilizing cutting-edge data science techniques 
-              to address fundamental questions in life sciences.
+              {{ $t('about.backgroundText') }}
             </p>
             
-            <h2>Research Interests</h2>
+            <h2>{{ $t('about.researchInterests') }}</h2>
             <ul>
-              <li>Genomic data analysis and interpretation</li>
-              <li>Machine learning applications in biology</li>
-              <li>Phylogenetic analysis and evolution</li>
-              <li>Biomarker discovery and validation</li>
-              <li>Multi-omics data integration</li>
+              <li v-for="interest in $t('about.researchInterestsList')" :key="interest">{{ interest }}</li>
             </ul>
             
-            <h2>Education & Experience</h2>
+            <h2>{{ $t('about.educationExperience') }}</h2>
             <p>
-              With a strong foundation in both computer science and biology, I bring a unique perspective to 
-              interdisciplinary research. My experience includes working with large-scale genomic datasets, 
-              developing computational pipelines, and collaborating with wet-lab researchers to translate 
-              computational findings into biological insights.
+              {{ $t('about.educationExperienceText') }}
             </p>
           </div>
         </div>
         
         <div>
           <div class="card p-6 mb-8">
-            <h3 class="text-lg font-semibold mb-4">Technical Skills</h3>
+            <h3 class="text-lg font-semibold mb-4">{{ $t('about.technicalSkills') }}</h3>
             <div class="space-y-3">
               <div>
                 <div class="flex justify-between mb-1">
@@ -84,7 +75,7 @@
           </div>
           
           <div class="card p-6">
-            <h3 class="text-lg font-semibold mb-4">Tools & Technologies</h3>
+            <h3 class="text-lg font-semibold mb-4">{{ $t('about.toolsTechnologies') }}</h3>
             <div class="flex flex-wrap gap-2">
               <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Python</span>
               <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">R</span>
@@ -104,9 +95,9 @@
 
 <script setup>
 useHead({
-  title: 'About - Portfolio',
+  title: () => `${$t('about.title')} - Portfolio`,
   meta: [
-    { name: 'description', content: 'Learn more about my background in data science and bioinformatics.' }
+    { name: 'description', content: () => $t('about.subtitle') }
   ]
 })
 </script>

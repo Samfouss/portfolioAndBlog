@@ -4,10 +4,10 @@
       <div class="text-center mb-16">
         <div class="flex items-center justify-center mb-4">
           <Dna class="h-12 w-12 text-green-600 dark:text-green-400 mr-4" />
-          <h1 class="text-4xl font-bold text-gray-900 dark:text-white">Bioinformatics</h1>
+          <h1 class="text-4xl font-bold text-gray-900 dark:text-white">{{ $t('blog.bioinformatics') }}</h1>
         </div>
         <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Computational approaches to biological problems, including genomic analysis, sequence alignment, and phylogenetic studies.
+          {{ $t('home.bioinformaticsDescription') }}
         </p>
       </div>
 
@@ -33,7 +33,7 @@
                 <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">Assembly</span>
               </div>
               <NuxtLink to="/blog/bioinformatics/genome-assembly-techniques" class="text-green-600 dark:text-green-400 hover:underline text-sm font-medium">
-                Read More →
+                {{ $t('blog.readMore') }} →
               </NuxtLink>
             </div>
           </div>
@@ -60,7 +60,7 @@
                 <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded text-xs">Evolution</span>
               </div>
               <NuxtLink to="/blog/bioinformatics/phylogenetic-analysis" class="text-green-600 dark:text-green-400 hover:underline text-sm font-medium">
-                Read More →
+                {{ $t('blog.readMore') }} →
               </NuxtLink>
             </div>
           </div>
@@ -87,7 +87,7 @@
                 <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded text-xs">AI</span>
               </div>
               <NuxtLink to="/blog/bioinformatics/protein-structure-prediction" class="text-green-600 dark:text-green-400 hover:underline text-sm font-medium">
-                Read More →
+                {{ $t('blog.readMore') }} →
               </NuxtLink>
             </div>
           </div>
@@ -101,9 +101,9 @@
 import { Dna, Calendar } from 'lucide-vue-next'
 
 useHead({
-  title: 'Bioinformatics Blog - Portfolio',
+  title: () => `${$t('blog.bioinformatics')} - Portfolio`,
   meta: [
-    { name: 'description', content: 'Bioinformatics articles covering genomics, phylogenetics, and computational biology.' }
+    { name: 'description', content: () => $t('home.bioinformaticsDescription') }
   ]
 })
 </script>

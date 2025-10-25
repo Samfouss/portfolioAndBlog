@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "portfolioAndBlog",
   "type": "module",
   "private": true,
   "scripts": {
@@ -10,14 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.6.3",
-    "@nuxt/image": "^1.11.0",
-    "@nuxtjs/color-mode": "^3.5.2",
+    "lucide-vue-next": "^0.548.0",
+    "nuxt": "^4.2.0",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "^10.1.1",
     "@nuxtjs/tailwindcss": "^6.14.0",
-    "@vueuse/nuxt": "^13.9.0",
-    "lucide-vue-next": "^0.542.0",
-    "nuxt": "^4.1.0",
-    "vue": "^3.5.20",
-    "vue-router": "^4.5.1"
+    "@pinia/nuxt": "^0.11.2"
   }
 }

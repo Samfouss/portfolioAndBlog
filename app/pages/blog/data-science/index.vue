@@ -4,10 +4,10 @@
       <div class="text-center mb-16">
         <div class="flex items-center justify-center mb-4">
           <BarChart3 class="h-12 w-12 text-blue-600 dark:text-blue-400 mr-4" />
-          <h1 class="text-4xl font-bold text-gray-900 dark:text-white">Data Science</h1>
+          <h1 class="text-4xl font-bold text-gray-900 dark:text-white">{{ $t('blog.dataScience') }}</h1>
         </div>
         <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Exploring machine learning, statistical analysis, and data visualization techniques applied to biological and clinical datasets.
+          {{ $t('home.dataScienceDescription') }}
         </p>
       </div>
 
@@ -33,7 +33,7 @@
                 <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded text-xs">Genomics</span>
               </div>
               <NuxtLink to="/blog/data-science/machine-learning-genomics" class="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium">
-                Read More →
+                {{ $t('blog.readMore') }} →
               </NuxtLink>
             </div>
           </div>
@@ -60,7 +60,7 @@
                 <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded text-xs">Clinical Data</span>
               </div>
               <NuxtLink to="/blog/data-science/statistical-analysis-clinical-data" class="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium">
-                Read More →
+                {{ $t('blog.readMore') }} →
               </NuxtLink>
             </div>
           </div>
@@ -87,7 +87,7 @@
                 <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded text-xs">Visualization</span>
               </div>
               <NuxtLink to="/blog/data-science/data-visualization-python" class="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium">
-                Read More →
+                {{ $t('blog.readMore') }} →
               </NuxtLink>
             </div>
           </div>
@@ -101,9 +101,9 @@
 import { BarChart3, Calendar } from 'lucide-vue-next'
 
 useHead({
-  title: 'Data Science Blog - Portfolio',
+  title: () => `${$t('blog.dataScience')} - Portfolio`,
   meta: [
-    { name: 'description', content: 'Data science articles covering machine learning, statistics, and data analysis in biological research.' }
+    { name: 'description', content: () => $t('home.dataScienceDescription') }
   ]
 })
 </script>

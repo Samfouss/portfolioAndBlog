@@ -1,24 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: "2025-07-15",
+  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxtjs/i18n"],
+  i18n: {
+    locales: [
+      { code: "en", iso: "en-US", name: "English", file: "en.json" },
+      { code: "fr", iso: "fr-FR", name: "Français", file: "fr.json" },
+    ],
+    defaultLocale: "en",
+    strategy: "prefix_except_default", // URLs: /en/about, /fr/about, /about (default)
+    langDir: "locales/",
+    lazy: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+    },
+  },
   devtools: { enabled: true },
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
-    '@nuxt/content',
-    '@nuxt/image',
-    '@vueuse/nuxt'
-  ],
-  colorMode: {
-    classSuffix: ''
-  },
-  content: {
-    highlight: {
-      theme: {
-        default: 'github-light',
-        dark: 'github-dark'
-      }
-    }
-  },
-  css: ['~/assets/css/main.css']
-})
+});
