@@ -4,11 +4,14 @@
     "about": "À propos",
     "blog": "Blog",
     "contact": "Contact",
-    "dataScience": "Science des données",
-    "bioinformatics": "Bioinformatique"
+    "dataScience": "Projets"
   },
   "home": {
-    "title": "Science des données et Bioinformatique",
+    "title0": "SAMA Fousseni * Portfolio",
+    "title1": "Biostatistique - Data ",
+    "title2": "Science & Bioinformatique",
+    "presentation": "Découvrez mes projets, lisez mon blog ou contactez-moi.",
+    "overview": "Mon parcours dans le domaine de la science des données a commencé par une solide formation en ingénierie statistique à Dakar, au Sénégal, où j'ai acquis des compétences analytiques fondamentales. Après avoir acquis une expérience pratique en tant que statisticien et assistant de recherche, j'ai approfondi mon expertise grâce à une formation spécialisée en biostatistique à l'Université Laval. Depuis 2022, je mets en pratique ces compétences multidisciplinaires en tant qu'analyste de données, travaillant à la croisée de la biostatistique, de la bio-informatique et de l'apprentissage automatique. Je m'appuie sur la modélisation statistique, l'analyse des données et les techniques modernes d'apprentissage automatique pour aider à résoudre des problèmes complexes.",
     "subtitle": "Explorer l'intersection entre la biologie computationnelle et la science des données pour débloquer des insights à partir de données biologiques complexes et faire avancer la découverte scientifique.",
     "learnMore": "En savoir plus sur moi",
     "getInTouch": "Me contacter",
@@ -31,7 +34,7 @@
   },
   "about": {
     "title": "À propos de moi",
-    "subtitle": "Passionné par le rapprochement entre la biologie et l'informatique",
+    "subtitle": "Passionné par le rapprochement entre la science des données et la santé",
     "background": "Contexte",
     "backgroundText": "Je suis un biologiste computationnel passionné par l'extraction d'insights significatifs à partir de données biologiques complexes. Mon travail s'étend à travers la génomique, la protéomique et la biologie des systèmes, utilisant des techniques de science des données de pointe pour répondre aux questions fondamentales en sciences de la vie.",
     "researchInterests": "Intérêts de recherche",

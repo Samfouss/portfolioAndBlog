@@ -17,14 +17,7 @@
             class="nav-link"
             :class="{ 'nav-link-active': $route.path === '/' }"
           >
-            Overview
-          </NuxtLink>
-          <NuxtLink
-            to="/about"
-            class="nav-link"
-            :class="{ 'nav-link-active': $route.path === '/about' }"
-          >
-            About Me
+            Home
           </NuxtLink>
           <NuxtLink
             to="/projects"
@@ -42,8 +35,18 @@
           </NuxtLink>
         </div>
 
-        <!-- Right: GitHub Icon -->
-        <div class="flex items-center">
+        <!-- Right: Language Switcher & GitHub Icon -->
+        <div class="flex items-center space-x-4">
+          <!-- Language Switcher -->
+          <button
+            @click="switchLanguage"
+            class="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors duration-200 text-sm"
+            :title="$i18n.locale === 'en' ? 'Switch to French' : 'Passer en anglais'"
+          >
+            {{ currentLanguage }}
+          </button>
+
+          <!-- GitHub Icon -->
           <a
             href="https://github.com"
             target="_blank"
@@ -72,13 +75,7 @@
             to="/"
             class="nav-link-mobile"
             @click="mobileMenuOpen = false"
-            >Overview</NuxtLink
-          >
-          <NuxtLink
-            to="/about"
-            class="nav-link-mobile"
-            @click="mobileMenuOpen = false"
-            >About Me</NuxtLink
+            >Home</NuxtLink
           >
           <NuxtLink
             to="/projects"
@@ -92,6 +89,15 @@
             @click="mobileMenuOpen = false"
             >Blog</NuxtLink
           >
+          
+          <!-- Language Switcher in Mobile Menu -->
+          <button
+            @click="switchLanguage"
+            class="nav-link-mobile text-left"
+            :title="$i18n.locale === 'en' ? 'Switch to French' : 'Passer en anglais'"
+          >
+            Language / Langue: {{ currentLanguage }}
+          </button>
         </div>
       </div>
     </div>
@@ -102,6 +108,18 @@
 import { Menu, Github } from "lucide-vue-next";
 
 const mobileMenuOpen = ref(false);
+const { locale, locales, setLocale } = useI18n();
+
+// Get current language display name
+const currentLanguage = computed(() => {
+  return locale.value === 'en' ? 'FR' : 'EN';
+});
+
+// Switch language function
+const switchLanguage = () => {
+  const newLocale = locale.value === 'en' ? 'fr' : 'en';
+  setLocale(newLocale);
+};
 </script>
 
 <style scoped>

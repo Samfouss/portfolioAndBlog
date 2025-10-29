@@ -4,12 +4,15 @@
     "about": "About",
     "blog": "Blog",
     "contact": "Contact",
-    "dataScience": "Data Science",
-    "bioinformatics": "Bioinformatics"
+    "dataScience": "Projects"
   },
   "home": {
-    "title": "Data Science & Bioinformatics",
-    "subtitle": "Exploring the intersection of computational biology and data science to unlock insights from complex biological data and drive scientific discovery.",
+    "title0": "SAMA Fousseni",
+    "title1": "Biostatistics - Data ",
+    "title2": "Science & Bioinformatics",
+    "presentation": "Explore my projects, read my blog, or get in touch.",
+    "overview": "My path in data science began with a solid engineering foundation in statistics from Dakar, Senegal, where I developed core analytical skills. After gaining hands-on experience as a statistician and research assistant, I deepened my expertise through specialized training in biostatistics at Université Laval. Since 2022, I've been applying this multidisciplinary skillset as a data analyst, working at the intersection of biostatistics, bioinformatics, and machine learning. I leverage statistical modeling, l'analyse des données, and modern ML techniques to help solve complex problems.",
+
     "learnMore": "Learn More About Me",
     "getInTouch": "Get In Touch",
     "featuredWork": "Featured Work",
