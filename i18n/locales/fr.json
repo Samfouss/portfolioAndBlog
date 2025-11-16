@@ -7,12 +7,17 @@
     "dataScience": "Projets"
   },
   "home": {
-    "title0": "SAMA Fousseni * Portfolio",
+    "title0": "Hi ! I am Fousseni SAMA",
     "title1": "Biostatistique - Data ",
-    "title2": "Science & Bioinformatique",
+    "title2": "science & Passionné de bioinformatique",
     "presentation": "Découvrez mes projets, lisez mon blog ou contactez-moi.",
-    "overview": "Mon parcours dans le domaine de la science des données a commencé par une solide formation en ingénierie statistique à Dakar, au Sénégal, où j'ai acquis des compétences analytiques fondamentales. Après avoir acquis une expérience pratique en tant que statisticien et assistant de recherche, j'ai approfondi mon expertise grâce à une formation spécialisée en biostatistique à l'Université Laval. Depuis 2022, je mets en pratique ces compétences multidisciplinaires en tant qu'analyste de données, travaillant à la croisée de la biostatistique, de la bio-informatique et de l'apprentissage automatique. Je m'appuie sur la modélisation statistique, l'analyse des données et les techniques modernes d'apprentissage automatique pour aider à résoudre des problèmes complexes.",
-    "subtitle": "Explorer l'intersection entre la biologie computationnelle et la science des données pour débloquer des insights à partir de données biologiques complexes et faire avancer la découverte scientifique.",
+    "overviewTitle": "Vue d'ensemble",
+    "overview": "Mon parcours dans le domaine de la science des données a débuté par une solide formation en ingénierie statistique à Dakar, au Sénégal, où j'ai acquis des compétences analytiques fondamentales à l'ENSAE. Après avoir acquis une expérience pratique en tant que statisticien et assistant de recherche, j'ai approfondi mes connaissances en appliquant les statistiques à la biologie et à la médecine grâce à une formation spécialisée en biostatistique à l'Université Laval. Depuis 2022, je mets en pratique ces compétences multidisciplinaires en tant qu'analyste de données et travaille sur des projets à la croisée de la biostatistique, de la bio-informatique et de l'apprentissage automatique. J'utilise la modélisation statistique, l'analyse des données génomiques et les techniques modernes d'apprentissage automatique pour aider à résoudre des problèmes complexes dans le domaine de la santé et de la recherche en sciences de la vie.",
+    "skillsTitle": "Compétences",
+    "toolsTechnologies": "Outils & Technologies",
+    "apprentissageMachine": "Apprentissage machine",
+    "education": "Formations",
+
     "learnMore": "En savoir plus sur moi",
     "getInTouch": "Me contacter",
     "featuredWork": "Travaux en vedette",
@@ -23,14 +28,144 @@
     "bioinformaticsTitle": "Bioinformatique",
     "bioinformaticsDescription": "Analyse génomique, alignement de séquences, études phylogénétiques et approches computationnelles aux problèmes biologiques.",
     "bioinformaticsLink": "Explorer les articles de bioinformatique →",
-    "skillsTitle": "Compétences et expertise",
     "skillsSubtitle": "Technologies et méthodologies avec lesquelles je travaille",
     "programming": "Programmation",
     "programmingSkills": "Python, R, JavaScript, SQL",
     "dataAnalysis": "Analyse de données",
     "dataAnalysisSkills": "Pandas, NumPy, Scikit-learn, Bioconductor",
     "machineLearning": "Apprentissage automatique",
-    "machineLearningSkills": "TensorFlow, PyTorch, Apprentissage profond"
+    "machineLearningSkills": "TensorFlow, PyTorch, Apprentissage profond",
+    "educations": "Formations",
+    "experiences": "Expériences",
+    "education1": {
+      "degree": "Maîtrise en biostatistique avec mémoire",
+      "institution": "Université Laval, Québec, Canada",
+      "period": "Janvier 2022 - Janvier 2025",
+      "focus": "Méthodes statistiques avancées, modélisation statistique, analyse de données haute dimension, programmation scientifique (R, Python, Bash)"
+    },
+    "education2": {
+      "degree": "Baccalauréat en statistiques : ingénieur des travaux statistiques",
+      "institution": "ENSAE, Dakar, Sénégal",
+      "period": "Septembre 2016 - Août 2020",
+      "focus": "Probabilités, statistiques mathématiques, méthodes d'évaluation d'impact, l'analyse scores de propension et appariement, analyse de données longitudinales, de survie, modèles prédictifs par apprentissage machine pour l'identification de facteurs pronostiques, big data, économétrie"
+    },
+    "experience1": {
+      "title": "Data manager et analyste de données",
+      "company": "ROSEPH",
+      "location": "Québec, Québec, Canada",
+      "period": "Depuis Février 2022",
+      "description": "Conception et implémentation de pipelines de collecte et d'analyse de données pour les projets. Élaboration de plans d'analyse statistique (SAP) détaillés incluant la gestion des données manquantes. Réalisation d'analyses statistiques des données et manipulation de bases de données volumineuses multi-sources avec R et Excel pour garantir l'intégrité et la qualité des données. Conception de tableaux de bord interactifs dynamiques (R Shiny) pour la communication de résultats complexes à des audiences non-techniques. Développement d'outils de reporting automatisés avec R et Power Platform, réduisant de près de 40% le temps de génération de rapports récurrents. Collaboration étroite avec des équipes multidisciplinaires pour définir les besoins analytiques et traduire les questions scientifiques en analyses statistiques actionnables."
+    },
+    "experience2": {
+      "title": "Analyste de données",
+      "company": "Université",
+      "location": "Québec, Québec, Canada",
+      "period": "Automne 2023 - Hiver 2024",
+      "description": "Nettoyage, validation et structuration de données textuelles issues d'articles. Manipulation et harmonisation de bases de données volumineuses multi-sources avec SQL, Python, Big Query et R pour garantir l'intégrité et la qualité des données."
+    },
+    "experience3": {
+      "title": "Analyse de données",
+      "company": "Université",
+      "location": "Québec, Québec, Canada",
+      "period": "Hiver 2023",
+      "description": "Traitement et analyse statistique de données d'éducation pour l'identification de déterminants de performance scolaire. Développement d'une interface R Shiny interactive pour la visualisation et l'exploration de résultats."
+    },
+    "experience4": {
+      "title": "Statisticien en chef",
+      "company": "CRES",
+      "location": "Dakar, Sénégal",
+      "period": "Février 2021 - Janvier 2022",
+      "description": "Conception de plans d'échantillonnage probabilistes stratifiés pour études observationnelles multi-sites garantissant la représentativité des populations cibles. Développement de protocoles de collecte de données standardisés avec des outils électroniques (CSPro) assurant la qualité et la traçabilité des données. Supervision de la collecte, harmonisation et structuration de bases de données multi-sources provenant d'enquêtes terrain. Réalisation d'analyses statistiques bivariées et multivariées pour l'identification de facteurs associés aux outcomes d'intérêt."
+    },
+    "experience5": {
+      "title": "Statisticien et data manager",
+      "company": "ISRA",
+      "location": "Dakar, Sénégal",
+      "period": "Janvier 2021 - Février 2021",
+      "description": "Nettoyage, harmonisation et structuration de données de recherche multi-sources pour analyses statistiques ultérieures. Application de techniques de détection d'anomalies et de valeurs aberrantes pour garantir l'intégrité des données avant analyse. Standardisation des formats de données selon des protocoles prédéfinis pour faciliter l'intégration dans des bases de données centralisées."
+    },
+    "experience6": {
+      "title": "Data manager et analyste de données",
+      "company": "StatInfo",
+      "location": "Dakar, Sénégal",
+      "period": "Septembre 2020 - Décembre 2020",
+      "description": "Conception et implémentation de systèmes de collecte de données sur le terrain avec formation des enquêteurs. Élaboration de méthodes d'échantillonnage adaptées aux objectifs de l'étude et aux contraintes opérationnelles. Création de visualisations de données (graphiques, tableaux) avec R et Excel pour la communication de résultats aux clients. Traitement statistique de données d'enquêtes avec R et production d'analyses descriptives et inférentielles."
+    },
+    "certifications": "Certifications",
+    "viewCertificate": "Voir le certificat",
+    "courseraSpecialization": {
+      "title": "Science des données génomiques",
+      "provider": "Coursera",
+      "course1": {
+        "name": "Introduction aux technologies génomiques",
+        "number": "Cours 1 sur 6",
+        "status": "Terminé"
+      },
+      "course2": {
+        "name": "Python pour la science des données génomiques",
+        "number": "Cours 2 sur 6",
+        "status": "Terminé"
+      },
+      "course3": {
+        "name": "Algorithmes pour le séquençage de l'ADN",
+        "number": "Cours 3 sur 6",
+        "status": "Terminé"
+      },
+      "course4": {
+        "name": "Outils en ligne de commande pour la science des données génomiques",
+        "number": "Cours 4 sur 6",
+        "status": "Terminé"
+      },
+      "course5": {
+        "name": "Bioconductor pour la science des données génomiques",
+        "number": "Cours 5 sur 6",
+        "status": "Terminé"
+      },
+      "course6": {
+        "name": "Statistiques pour la science des données génomiques",
+        "number": "Cours 6 sur 6",
+        "status": "Terminé"
+      }
+    },
+    "bioinformaticsSpecialization": {
+      "title": "Bioinformatique",
+      "provider": "Coursera",
+      "course1": {
+        "name": "Trouver des messages cachés dans l'ADN (Bioinformatique I)",
+        "number": "Cours 1 sur 7",
+        "status": "77% complété"
+      },
+      "course2": {
+        "name": "Séquençage du génome (Bioinformatique II)",
+        "number": "Cours 2 sur 7",
+        "status": "8% complété"
+      },
+      "course3": {
+        "name": "Comparaison de gènes, protéines et génomes (Bioinformatique III)",
+        "number": "Cours 3 sur 7",
+        "status": "Non commencé"
+      },
+      "course4": {
+        "name": "Évolution moléculaire (Bioinformatique IV)",
+        "number": "Cours 4 sur 7",
+        "status": "Non commencé"
+      },
+      "course5": {
+        "name": "Science des données génomiques et clustering (Bioinformatique V)",
+        "number": "Cours 5 sur 7",
+        "status": "Non commencé"
+      },
+      "course6": {
+        "name": "Trouver des mutations dans l'ADN et les protéines (Bioinformatique VI)",
+        "number": "Cours 6 sur 7",
+        "status": "Non commencé"
+      },
+      "course7": {
+        "name": "Projet de synthèse en bioinformatique : Big Data en biologie",
+        "number": "Cours 7 sur 7",
+        "status": "Non commencé"
+      }
+    }
   },
   "about": {
     "title": "À propos de moi",

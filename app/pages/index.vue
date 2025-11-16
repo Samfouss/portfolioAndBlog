@@ -14,7 +14,7 @@
             </h1>
 
             <p class="text-xl text-gray-600 mb-8 max-w-2xl">
-              Hi, I am Fousseni SAMA
+              {{ $t("home.title0") }}
             </p>
             <p class="text-lg text-gray-600 mb-8 max-w-2xl">
               {{ $t("home.presentation") }}
@@ -51,7 +51,9 @@
     <section class="py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center mb-8">
-          <h2 class="text-5xl md:text-7xl font-bold mr-8">Overview</h2>
+          <h2 class="text-5xl md:text-7xl font-bold mr-8">
+            {{ $t("home.overviewTitle") }}
+          </h2>
           <div class="flex-1 h-px bg-gray-600"></div>
         </div>
         <div class="max-w-4xl">
@@ -67,7 +69,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center mb-12">
           <h2 class="text-5xl md:text-7xl font-bold mr-8 text-white">
-            My Skills
+            {{ $t("home.skillsTitle") }}
           </h2>
           <div class="flex-1 h-px bg-gray-600"></div>
         </div>
@@ -75,29 +77,18 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Technical Skills -->
           <div class="card p-6">
-            <h3 class="text-2xl font-semibold mb-6">Technical Skills</h3>
+            <h3 class="text-2xl font-semibold mb-6">
+              {{ $t("home.skillsTitle") }}
+            </h3>
             <div class="space-y-4">
               <div>
                 <div class="flex justify-between mb-2">
                   <span class="text-sm font-medium">Python</span>
-                  <span class="text-sm text-gray-500">95%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2">
-                  <div
-                    class="bg-blue-600 h-2 rounded-full"
-                    style="width: 95%"
-                  ></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-2">
-                  <span class="text-sm font-medium">R</span>
                   <span class="text-sm text-gray-500">90%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
                   <div
-                    class="bg-green-600 h-2 rounded-full"
+                    class="bg-blue-600 h-2 rounded-full"
                     style="width: 90%"
                   ></div>
                 </div>
@@ -105,13 +96,28 @@
 
               <div>
                 <div class="flex justify-between mb-2">
-                  <span class="text-sm font-medium">Machine Learning</span>
-                  <span class="text-sm text-gray-500">85%</span>
+                  <span class="text-sm font-medium">R</span>
+                  <span class="text-sm text-gray-500">95%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-green-600 h-2 rounded-full"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium">{{
+                    $t("home.apprentissageMachine")
+                  }}</span>
+                  <span class="text-sm text-gray-500">100%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
                   <div
                     class="bg-purple-600 h-2 rounded-full"
-                    style="width: 85%"
+                    style="width: 100%"
                   ></div>
                 </div>
               </div>
@@ -119,12 +125,12 @@
               <div>
                 <div class="flex justify-between mb-2">
                   <span class="text-sm font-medium">Genomics</span>
-                  <span class="text-sm text-gray-500">88%</span>
+                  <span class="text-sm text-gray-500">60%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
                   <div
                     class="bg-indigo-600 h-2 rounded-full"
-                    style="width: 88%"
+                    style="width: 60%"
                   ></div>
                 </div>
               </div>
@@ -185,7 +191,9 @@
     <section class="py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center mb-12">
-          <h2 class="text-5xl md:text-7xl font-bold mr-8">Education</h2>
+          <h2 class="text-5xl md:text-7xl font-bold mr-8">
+            {{ $t("home.educations") }}
+          </h2>
           <div class="flex-1 h-px bg-gray-600"></div>
         </div>
 
@@ -194,15 +202,18 @@
             <div class="flex justify-between items-start mb-4">
               <div>
                 <h3 class="text-xl font-semibold mb-1">
-                  Master's in Bioinformatics
+                  {{ $t("home.education1.degree") }}
                 </h3>
-                <p class="text-blue-600 font-medium">University Name</p>
+                <p class="text-blue-600 font-medium">
+                  {{ $t("home.education1.institution") }}
+                </p>
               </div>
-              <span class="text-sm text-gray-500">2018 - 2020</span>
+              <span class="text-sm text-gray-500">
+                {{ $t("home.education1.period") }}
+              </span>
             </div>
             <p class="text-gray-600">
-              Focused on computational biology, genomics analysis, and machine
-              learning applications in biological systems.
+              {{ $t("home.education1.focus") }}
             </p>
           </div>
 
@@ -210,146 +221,186 @@
             <div class="flex justify-between items-start mb-4">
               <div>
                 <h3 class="text-xl font-semibold mb-1">
-                  Bachelor's in Computer Science
+                  {{ $t("home.education2.degree") }}
                 </h3>
-                <p class="text-blue-600 font-medium">University Name</p>
+                <p class="text-blue-600 font-medium">
+                  {{ $t("home.education2.institution") }}
+                </p>
               </div>
-              <span class="text-sm text-gray-500">2014 - 2018</span>
+              <span class="text-sm text-gray-500">
+                {{ $t("home.education2.period") }}
+              </span>
             </div>
             <p class="text-gray-600">
-              Comprehensive study of algorithms, data structures, software
-              engineering, and database systems.
+              {{ $t("home.education2.focus") }}
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="py-20">
+    <section class="py-20 bg-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-5xl md:text-7xl font-bold text-white mb-4">
-            Experience
+            {{ $t("home.experiences") }}
           </h2>
         </div>
       </div>
 
       <div
-        class="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16"
+        class="flex flex-col justify-center divide-y divide-gray-600 [&>*]:py-16"
       >
         <div class="w-full max-w-3xl mx-auto">
-          <!-- Vertical Timeline #1 -->
           <div class="-my-6">
-            <!-- Item #1 -->
             <div class="relative pl-8 sm:pl-32 py-6 group">
               <!-- Purple label -->
               <div
-                class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0"
+                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
               >
-                The origin
+                {{ $t("home.experience1.title") }}
               </div>
               <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
               <div
-                class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
               >
-                <time
-                  class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full"
-                  >May, 2020</time
-                >
-                <div class="text-xl font-bold text-slate-900">
-                  Acme was founded in Milan, Italy
+                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
+                  {{ $t("home.experience1.company") }} |
+                  {{ $t("home.experience1.location") }}
                 </div>
+                <time
+                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                  >{{ $t("home.experience1.period") }}</time
+                >
               </div>
               <!-- Content -->
-              <div class="text-slate-500">
-                Pretium lectus quam id leo. Urna et pharetra pharetra massa
-                massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit
-                cursus risus.
+              <div class="text-gray-300">
+                {{ $t("home.experience1.description") }}
               </div>
             </div>
-
-            <!-- Item #2 -->
             <div class="relative pl-8 sm:pl-32 py-6 group">
               <!-- Purple label -->
               <div
-                class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0"
+                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
               >
-                The milestone
+                {{ $t("home.experience2.title") }}
               </div>
               <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
               <div
-                class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
               >
-                <time
-                  class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full"
-                  >May, 2021</time
-                >
-                <div class="text-xl font-bold text-slate-900">
-                  Reached 5K customers
+                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
+                  {{ $t("home.experience2.company") }} |
+                  {{ $t("home.experience2.location") }}
                 </div>
+                <time
+                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                  >{{ $t("home.experience2.period") }}</time
+                >
               </div>
               <!-- Content -->
-              <div class="text-slate-500">
-                Pretium lectus quam id leo. Urna et pharetra pharetra massa
-                massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit
-                cursus risus.
+              <div class="text-gray-300">
+                {{ $t("home.experience2.description") }}
               </div>
             </div>
-
-            <!-- Item #3 -->
             <div class="relative pl-8 sm:pl-32 py-6 group">
               <!-- Purple label -->
               <div
-                class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0"
+                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
               >
-                The acquisitions
+                {{ $t("home.experience3.title") }}
               </div>
               <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
               <div
-                class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
               >
-                <time
-                  class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full"
-                  >May, 2022</time
-                >
-                <div class="text-xl font-bold text-slate-900">
-                  Acquired various companies, inluding Technology Inc.
+                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
+                  {{ $t("home.experience3.company") }} |
+                  {{ $t("home.experience3.location") }}
                 </div>
+                <time
+                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                  >{{ $t("home.experience3.period") }}</time
+                >
               </div>
               <!-- Content -->
-              <div class="text-slate-500">
-                Pretium lectus quam id leo. Urna et pharetra pharetra massa
-                massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit
-                cursus risus.
+              <div class="text-gray-300">
+                {{ $t("home.experience3.description") }}
               </div>
             </div>
-
-            <!-- Item #4 -->
             <div class="relative pl-8 sm:pl-32 py-6 group">
               <!-- Purple label -->
               <div
-                class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0"
+                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
               >
-                The IPO
+                {{ $t("home.experience4.title") }}
               </div>
               <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
               <div
-                class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
               >
-                <time
-                  class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full"
-                  >May, 2023</time
-                >
-                <div class="text-xl font-bold text-slate-900">
-                  Acme went public at the New York Stock Exchange
+                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
+                  {{ $t("home.experience4.company") }} |
+                  {{ $t("home.experience4.location") }}
                 </div>
+                <time
+                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                  >{{ $t("home.experience4.period") }}</time
+                >
               </div>
               <!-- Content -->
-              <div class="text-slate-500">
-                Pretium lectus quam id leo. Urna et pharetra pharetra massa
-                massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit
-                cursus risus.
+              <div class="text-gray-300">
+                {{ $t("home.experience4.description") }}
+              </div>
+            </div>
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+              <!-- Purple label -->
+              <div
+                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
+              >
+                {{ $t("home.experience5.title") }}
+              </div>
+              <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+              <div
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
+              >
+                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
+                  {{ $t("home.experience5.company") }} |
+                  {{ $t("home.experience5.location") }}
+                </div>
+                <time
+                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                  >{{ $t("home.experience5.period") }}</time
+                >
+              </div>
+              <!-- Content -->
+              <div class="text-gray-300">
+                {{ $t("home.experience5.description") }}
+              </div>
+            </div>
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+              <!-- Purple label -->
+              <div
+                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
+              >
+                {{ $t("home.experience6.title") }}
+              </div>
+              <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+              <div
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
+              >
+                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
+                  {{ $t("home.experience6.company") }} |
+                  {{ $t("home.experience6.location") }}
+                </div>
+                <time
+                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                  >{{ $t("home.experience6.period") }}</time
+                >
+              </div>
+              <!-- Content -->
+              <div class="text-gray-300">
+                {{ $t("home.experience6.description") }}
               </div>
             </div>
           </div>
@@ -449,42 +500,167 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center mb-12">
           <h2 class="text-5xl md:text-7xl font-bold mr-8 text-white">
-            Certifications
+            {{ $t("home.certifications") }}
           </h2>
           <div class="flex-1 h-px bg-gray-600"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Genomic Data Science Section -->
+        <div class="mb-12">
+          <h3 class="text-3xl font-bold mb-6 text-white">
+            {{ $t("home.courseraSpecialization.title") }}
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-gray-700 p-6 rounded-lg">
             <h3 class="text-xl font-semibold mb-2 text-white">
-              Google Cloud Certified Data Engineer
+              {{ $t("home.courseraSpecialization.course1.name") }}
             </h3>
-            <p class="text-blue-400 mb-2">Google Cloud Platform</p>
-            <p class="text-sm text-gray-400">2023</p>
+            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course1.number") }} · {{ $t("home.courseraSpecialization.course1.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
           </div>
 
           <div class="bg-gray-700 p-6 rounded-lg">
             <h3 class="text-xl font-semibold mb-2 text-white">
-              AWS Certified Machine Learning
+              {{ $t("home.courseraSpecialization.course2.name") }}
             </h3>
-            <p class="text-blue-400 mb-2">Amazon Web Services</p>
-            <p class="text-sm text-gray-400">2022</p>
+            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course2.number") }} · {{ $t("home.courseraSpecialization.course2.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
           </div>
 
           <div class="bg-gray-700 p-6 rounded-lg">
             <h3 class="text-xl font-semibold mb-2 text-white">
-              Coursera Bioinformatics Specialization
+              {{ $t("home.courseraSpecialization.course3.name") }}
             </h3>
-            <p class="text-blue-400 mb-2">Coursera</p>
-            <p class="text-sm text-gray-400">2021</p>
+            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course3.number") }} · {{ $t("home.courseraSpecialization.course3.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
           </div>
 
           <div class="bg-gray-700 p-6 rounded-lg">
             <h3 class="text-xl font-semibold mb-2 text-white">
-              Deep Learning Specialization
+              {{ $t("home.courseraSpecialization.course4.name") }}
             </h3>
-            <p class="text-blue-400 mb-2">deeplearning.ai</p>
-            <p class="text-sm text-gray-400">2020</p>
+            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course4.number") }} · {{ $t("home.courseraSpecialization.course4.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2 text-white">
+              {{ $t("home.courseraSpecialization.course5.name") }}
+            </h3>
+            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course5.number") }} · {{ $t("home.courseraSpecialization.course5.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2 text-white">
+              {{ $t("home.courseraSpecialization.course6.name") }}
+            </h3>
+            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course6.number") }} · {{ $t("home.courseraSpecialization.course6.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
+          </div>
+          </div>
+        </div>
+
+        <!-- Bioinformatics Section -->
+        <div>
+          <h3 class="text-3xl font-bold mb-6 text-white">
+            {{ $t("home.bioinformaticsSpecialization.title") }}
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2 text-white">
+              {{ $t("home.bioinformaticsSpecialization.course1.name") }}
+            </h3>
+            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course1.number") }} · {{ $t("home.bioinformaticsSpecialization.course1.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2 text-white">
+              {{ $t("home.bioinformaticsSpecialization.course2.name") }}
+            </h3>
+            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course2.number") }} · {{ $t("home.bioinformaticsSpecialization.course2.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2 text-white">
+              {{ $t("home.bioinformaticsSpecialization.course3.name") }}
+            </h3>
+            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course3.number") }} · {{ $t("home.bioinformaticsSpecialization.course3.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2 text-white">
+              {{ $t("home.bioinformaticsSpecialization.course4.name") }}
+            </h3>
+            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course4.number") }} · {{ $t("home.bioinformaticsSpecialization.course4.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2 text-white">
+              {{ $t("home.bioinformaticsSpecialization.course5.name") }}
+            </h3>
+            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course5.number") }} · {{ $t("home.bioinformaticsSpecialization.course5.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2 text-white">
+              {{ $t("home.bioinformaticsSpecialization.course6.name") }}
+            </h3>
+            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course6.number") }} · {{ $t("home.bioinformaticsSpecialization.course6.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2 text-white">
+              {{ $t("home.bioinformaticsSpecialization.course7.name") }}
+            </h3>
+            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
+            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course7.number") }} · {{ $t("home.bioinformaticsSpecialization.course7.status") }}</p>
+            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+              {{ $t("home.viewCertificate") }} →
+            </a>
+          </div>
           </div>
         </div>
       </div>
@@ -634,6 +810,8 @@ useHead({
 </script>
 
 <style scoped>
+@import "tailwindcss" @reference;
+
 .btn-primary {
   @apply bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 inline-block text-center;
 }

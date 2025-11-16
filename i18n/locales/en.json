@@ -7,11 +7,16 @@
     "dataScience": "Projects"
   },
   "home": {
-    "title0": "SAMA Fousseni",
+    "title0": "Salut ! Je suis Fousseni SAMA",
     "title1": "Biostatistics - Data ",
-    "title2": "Science & Bioinformatics",
+    "title2": "scientist & Bioinformatics enthusiast",
     "presentation": "Explore my projects, read my blog, or get in touch.",
-    "overview": "My path in data science began with a solid engineering foundation in statistics from Dakar, Senegal, where I developed core analytical skills. After gaining hands-on experience as a statistician and research assistant, I deepened my expertise through specialized training in biostatistics at Université Laval. Since 2022, I've been applying this multidisciplinary skillset as a data analyst, working at the intersection of biostatistics, bioinformatics, and machine learning. I leverage statistical modeling, l'analyse des données, and modern ML techniques to help solve complex problems.",
+    "overviewTitle": "Overview",
+    "overview": "My journey in the field of data science began with a solid background in statistical engineering in Dakar, Senegal, where I acquired fundamental analytical skills at ENSAE. After gaining practical experience as a statistician and research assistant, I deepened my knowledge by applying statistics to biology and medicine through specialized training in biostatistics at Laval University. Since 2022, I have been putting these multidisciplinary skills into practice as a data analyst, working on projects at the intersection of biostatistics, bioinformatics, and machine learning. I use statistical modeling, genomic data analysis, and modern machine learning techniques to help solve complex problems in healthcare and life sciences research.",
+    "skillsTitle": "Skills",
+    "toolsTechnologies": "Tools & Technologies",
+    "apprentissageMachine": "Machine learning",
+    "education": "Educations",
 
     "learnMore": "Learn More About Me",
     "getInTouch": "Get In Touch",
@@ -23,14 +28,145 @@
     "bioinformaticsTitle": "Bioinformatics",
     "bioinformaticsDescription": "Genomic analysis, sequence alignment, phylogenetic studies, and computational approaches to biological problems.",
     "bioinformaticsLink": "Explore Bioinformatics Posts →",
-    "skillsTitle": "Skills & Expertise",
+
     "skillsSubtitle": "Technologies and methodologies I work with",
     "programming": "Programming",
     "programmingSkills": "Python, R, JavaScript, SQL",
     "dataAnalysis": "Data Analysis",
     "dataAnalysisSkills": "Pandas, NumPy, Scikit-learn, Bioconductor",
     "machineLearning": "Machine Learning",
-    "machineLearningSkills": "TensorFlow, PyTorch, Deep Learning"
+    "machineLearningSkills": "TensorFlow, PyTorch, Deep Learning",
+    "educations": "Education",
+    "experiences": "Experiences",
+    "education1": {
+      "degree": "Master's in Biostatistics with thesis",
+      "institution": "Université Laval, Québec, Canada",
+      "period": "January 2022 - January 2025",
+      "focus": "Advanced statistical methods, statistical modeling, high-dimensional data analysis, scientific programming (R, Python, Bash)"
+    },
+    "education2": {
+      "degree": "Bachelor's in Statistics: Statistical Engineering",
+      "institution": "ENSAE, Dakar, Senegal",
+      "period": "September 2016 - August 2020",
+      "focus": "Probability, mathematical statistics, impact evaluation methods, propensity score and matching analysis, longitudinal and survival data analysis, machine learning predictive models for prognostic factor identification, big data, econometrics"
+    },
+    "experience1": {
+      "title": "Data Manager and Data Analyst",
+      "company": "ROSEPH",
+      "location": "Québec, Québec, Canada",
+      "period": "Feb 2022",
+      "description": "Design and implementation of data collection and analysis pipelines for projects. Development of detailed statistical analysis plans (SAP) including missing data management. Statistical analysis of data and manipulation of large multi-source databases with R and Excel to ensure data integrity and quality. Creation of interactive dynamic dashboards (R Shiny) for communicating complex results to non-technical audiences. Development of automated reporting tools with R and Power Platform, reducing report generation time by nearly 40%. Close collaboration with multidisciplinary teams to define analytical needs and translate scientific questions into actionable statistical analyses."
+    },
+    "experience2": {
+      "title": "Data Analyst",
+      "company": "University",
+      "location": "Québec, Québec, Canada",
+      "period": "Fall 2023 - Winter 2024",
+      "description": "Cleaning, validation and structuring of textual data from articles. Manipulation and harmonization of large multi-source databases with SQL, Python, Big Query and R to ensure data integrity and quality."
+    },
+    "experience3": {
+      "title": "Data Analyst",
+      "company": "University",
+      "location": "Québec, Québec, Canada",
+      "period": "Winter 2023",
+      "description": "Processing and statistical analysis of education data for identifying determinants of school performance. Development of an interactive R Shiny interface for visualization and exploration of results."
+    },
+    "experience4": {
+      "title": "Chief Statistician",
+      "company": "CRES",
+      "location": "Dakar, Senegal",
+      "period": "February 2021 - January 2022",
+      "description": "Design of stratified probabilistic sampling plans for multi-site observational studies ensuring representativeness of target populations. Development of standardized data collection protocols with electronic tools (CSPro) ensuring data quality and traceability. Supervision of collection, harmonization and structuring of multi-source databases from field surveys. Performance of bivariate and multivariate statistical analyses for identifying factors associated with outcomes of interest."
+    },
+    "experience5": {
+      "title": "Statistician and Data Manager",
+      "company": "ISRA",
+      "location": "Dakar, Senegal",
+      "period": "January 2021 - February 2021",
+      "description": "Cleaning, harmonization and structuring of multi-source research data for subsequent statistical analyses. Application of anomaly detection and outlier detection techniques to ensure data integrity before analysis. Standardization of data formats according to predefined protocols to facilitate integration into centralized databases."
+    },
+    "experience6": {
+      "title": "Data Manager and Data Analyst",
+      "company": "StatInfo",
+      "location": "Dakar, Senegal",
+      "period": "September 2020 - December 2020",
+      "description": "Design and implementation of field data collection systems with interviewer training. Development of sampling methods adapted to study objectives and operational constraints. Creation of data visualizations (graphs, tables) with R and Excel for communicating results to clients. Statistical processing of survey data with R and production of descriptive and inferential analyses."
+    },
+    "certifications": "Certifications",
+    "viewCertificate": "View Certificate",
+    "courseraSpecialization": {
+      "title": "Genomic Data Science",
+      "provider": "Coursera",
+      "course1": {
+        "name": "Introduction to Genomic Technologies",
+        "number": "Course 1 of 6",
+        "status": "Complete"
+      },
+      "course2": {
+        "name": "Python for Genomic Data Science",
+        "number": "Course 2 of 6",
+        "status": "Complete"
+      },
+      "course3": {
+        "name": "Algorithms for DNA Sequencing",
+        "number": "Course 3 of 6",
+        "status": "Complete"
+      },
+      "course4": {
+        "name": "Command Line Tools for Genomic Data Science",
+        "number": "Course 4 of 6",
+        "status": "Complete"
+      },
+      "course5": {
+        "name": "Bioconductor for Genomic Data Science",
+        "number": "Course 5 of 6",
+        "status": "Complete"
+      },
+      "course6": {
+        "name": "Statistics for Genomic Data Science",
+        "number": "Course 6 of 6",
+        "status": "Complete"
+      }
+    },
+    "bioinformaticsSpecialization": {
+      "title": "Bioinformatics",
+      "provider": "Coursera",
+      "course1": {
+        "name": "Finding Hidden Messages in DNA (Bioinformatics I)",
+        "number": "Course 1 of 7",
+        "status": "77% complete"
+      },
+      "course2": {
+        "name": "Genome Sequencing (Bioinformatics II)",
+        "number": "Course 2 of 7",
+        "status": "8% complete"
+      },
+      "course3": {
+        "name": "Comparing Genes, Proteins, and Genomes (Bioinformatics III)",
+        "number": "Course 3 of 7",
+        "status": "Not started"
+      },
+      "course4": {
+        "name": "Molecular Evolution (Bioinformatics IV)",
+        "number": "Course 4 of 7",
+        "status": "Not started"
+      },
+      "course5": {
+        "name": "Genomic Data Science and Clustering (Bioinformatics V)",
+        "number": "Course 5 of 7",
+        "status": "Not started"
+      },
+      "course6": {
+        "name": "Finding Mutations in DNA and Proteins (Bioinformatics VI)",
+        "number": "Course 6 of 7",
+        "status": "Not started"
+      },
+      "course7": {
+        "name": "Bioinformatics Capstone: Big Data in Biology",
+        "number": "Course 7 of 7",
+        "status": "Not started"
+      }
+    }
   },
   "about": {
     "title": "About Me",

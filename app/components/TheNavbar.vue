@@ -41,7 +41,7 @@
           <button
             @click="switchLanguage"
             class="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors duration-200 text-sm"
-            :title="$i18n.locale === 'en' ? 'Switch to French' : 'Passer en anglais'"
+            :title="locale === 'en' ? 'Switch to French' : 'Passer en anglais'"
           >
             {{ currentLanguage }}
           </button>
@@ -94,7 +94,7 @@
           <button
             @click="switchLanguage"
             class="nav-link-mobile text-left"
-            :title="$i18n.locale === 'en' ? 'Switch to French' : 'Passer en anglais'"
+            :title="locale === 'en' ? 'Switch to French' : 'Passer en anglais'"
           >
             Language / Langue: {{ currentLanguage }}
           </button>
@@ -108,7 +108,7 @@
 import { Menu, Github } from "lucide-vue-next";
 
 const mobileMenuOpen = ref(false);
-const { locale, locales, setLocale } = useI18n();
+const { locale, setLocale } = useI18n();
 
 // Get current language display name
 const currentLanguage = computed(() => {
@@ -123,6 +123,8 @@ const switchLanguage = () => {
 </script>
 
 <style scoped>
+@import "tailwindcss" @reference;
+
 .nav-link {
   @apply text-gray-300 hover:text-white font-medium transition-colors duration-200;
 }

@@ -46,6 +46,8 @@ const mobileMenuOpen = ref(false)
 </script>
 
 <style scoped>
+@import "tailwindcss" @reference;
+
 .nav-link {
   @apply text-gray-300 hover:text-white font-medium transition-colors duration-200;
 }

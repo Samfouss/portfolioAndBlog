@@ -47,6 +47,8 @@ import { Github, Linkedin, Mail } from 'lucide-vue-next'
 </script>
 
 <style scoped>
+@import "tailwindcss" @reference;
+
 .footer-link {
   @apply text-gray-400 hover:text-white transition-colors duration-200;
 }
