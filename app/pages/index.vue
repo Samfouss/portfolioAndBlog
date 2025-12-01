@@ -29,18 +29,12 @@
 
           <!-- Right Column: Profile Image -->
           <div class="flex justify-center lg:justify-end">
-            <div
-              class="w-80 h-96 bg-gray-600 rounded-2xl flex items-center justify-center"
-            >
-              <div
-                class="w-64 h-80 bg-gray-500 rounded-xl flex items-center justify-center"
-              >
-                <div
-                  class="w-48 h-64 bg-gray-400 rounded-lg flex items-center justify-center"
-                >
-                  <div class="text-gray-600 text-6xl">👨‍💻</div>
-                </div>
-              </div>
+            <div class="w-96 h-[32rem] rounded-2xl overflow-hidden shadow-lg">
+              <img
+                :src="sam1Image"
+                alt="Profile picture"
+                class="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -48,7 +42,7 @@
     </section>
 
     <!-- Overview Section -->
-    <section class="py-20">
+    <section id="overview" class="py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center mb-8">
           <h2 class="text-5xl md:text-7xl font-bold mr-8">
@@ -125,12 +119,12 @@
               <div>
                 <div class="flex justify-between mb-2">
                   <span class="text-sm font-medium">Genomics</span>
-                  <span class="text-sm text-gray-500">60%</span>
+                  <span class="text-sm text-gray-500">40%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
                   <div
                     class="bg-indigo-600 h-2 rounded-full"
-                    style="width: 60%"
+                    style="width: 40%"
                   ></div>
                 </div>
               </div>
@@ -241,170 +235,183 @@
 
     <section class="py-20 bg-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-5xl md:text-7xl font-bold text-white mb-4">
+        <div class="flex items-center mb-12">
+          <h2 class="text-5xl md:text-7xl font-bold mr-8 text-white">
             {{ $t("home.experiences") }}
           </h2>
+          <div class="flex-1 h-px bg-gray-600"></div>
         </div>
-      </div>
 
-      <div
-        class="flex flex-col justify-center divide-y divide-gray-600 [&>*]:py-16"
-      >
-        <div class="w-full max-w-3xl mx-auto">
-          <div class="-my-6">
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-              <!-- Purple label -->
-              <div
-                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
-              >
-                {{ $t("home.experience1.title") }}
-              </div>
-              <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-              <div
-                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
-              >
-                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
-                  {{ $t("home.experience1.company") }} |
-                  {{ $t("home.experience1.location") }}
-                </div>
-                <time
-                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
-                  >{{ $t("home.experience1.period") }}</time
+        <div
+          class="flex flex-col justify-center divide-y divide-gray-600 [&>*]:py-16"
+        >
+          <div class="w-full max-w-3xl">
+            <div class="">
+              <div class="relative pl-4 sm:pl-4 py-6 group">
+                <!-- Purple label -->
+                <div
+                  class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
                 >
+                  {{ $t("home.experience1.title") }}
+                </div>
+                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full after:-translate-x-1/2 after:translate-y-1.5"
+                >
+                  <div
+                    class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0"
+                  >
+                    {{ $t("home.experience1.company") }} |
+                    {{ $t("home.experience1.location") }}
+                  </div>
+                  <time
+                    class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                    >{{ $t("home.experience1.period") }}</time
+                  >
+                </div>
+                <!-- Content -->
+                <div class="text-gray-300">
+                  {{ $t("home.experience1.description") }}
+                </div>
               </div>
-              <!-- Content -->
-              <div class="text-gray-300">
-                {{ $t("home.experience1.description") }}
+              <div class="relative pl-4 sm:pl-4 py-6 group">
+                <!-- Purple label -->
+                <div
+                  class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
+                >
+                  {{ $t("home.experience2.title") }}
+                </div>
+                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full after:-translate-x-1/2 after:translate-y-1.5"
+                >
+                  <div
+                    class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0"
+                  >
+                    {{ $t("home.experience2.company") }} |
+                    {{ $t("home.experience2.location") }}
+                  </div>
+                  <time
+                    class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                    >{{ $t("home.experience2.period") }}</time
+                  >
+                </div>
+                <!-- Content -->
+                <div class="text-gray-300">
+                  {{ $t("home.experience2.description") }}
+                </div>
+              </div>
+              <div class="relative pl-4 sm:pl-4 py-6 group">
+                <!-- Purple label -->
+                <div
+                  class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
+                >
+                  {{ $t("home.experience3.title") }}
+                </div>
+                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full after:-translate-x-1/2 after:translate-y-1.5"
+                >
+                  <div
+                    class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0"
+                  >
+                    {{ $t("home.experience3.company") }} |
+                    {{ $t("home.experience3.location") }}
+                  </div>
+                  <time
+                    class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                    >{{ $t("home.experience3.period") }}</time
+                  >
+                </div>
+                <!-- Content -->
+                <div class="text-gray-300">
+                  {{ $t("home.experience3.description") }}
+                </div>
+              </div>
+              <div class="relative pl-4 sm:pl-4 py-6 group">
+                <!-- Purple label -->
+                <div
+                  class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
+                >
+                  {{ $t("home.experience4.title") }}
+                </div>
+                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full after:-translate-x-1/2 after:translate-y-1.5"
+                >
+                  <div
+                    class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0"
+                  >
+                    {{ $t("home.experience4.company") }} |
+                    {{ $t("home.experience4.location") }}
+                  </div>
+                  <time
+                    class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                    >{{ $t("home.experience4.period") }}</time
+                  >
+                </div>
+                <!-- Content -->
+                <div class="text-gray-300">
+                  {{ $t("home.experience4.description") }}
+                </div>
+              </div>
+              <div class="relative pl-4 sm:pl-4 py-6 group">
+                <!-- Purple label -->
+                <div
+                  class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
+                >
+                  {{ $t("home.experience5.title") }}
+                </div>
+                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full after:-translate-x-1/2 after:translate-y-1.5"
+                >
+                  <div
+                    class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0"
+                  >
+                    {{ $t("home.experience5.company") }} |
+                    {{ $t("home.experience5.location") }}
+                  </div>
+                  <time
+                    class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                    >{{ $t("home.experience5.period") }}</time
+                  >
+                </div>
+                <!-- Content -->
+                <div class="text-gray-300">
+                  {{ $t("home.experience5.description") }}
+                </div>
+              </div>
+              <div class="relative pl-4 sm:pl-4 py-6 group">
+                <!-- Purple label -->
+                <div
+                  class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
+                >
+                  {{ $t("home.experience6.title") }}
+                </div>
+                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full after:-translate-x-1/2 after:translate-y-1.5"
+                >
+                  <div
+                    class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0"
+                  >
+                    {{ $t("home.experience6.company") }} |
+                    {{ $t("home.experience6.location") }}
+                  </div>
+                  <time
+                    class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
+                    >{{ $t("home.experience6.period") }}</time
+                  >
+                </div>
+                <!-- Content -->
+                <div class="text-gray-300">
+                  {{ $t("home.experience6.description") }}
+                </div>
               </div>
             </div>
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-              <!-- Purple label -->
-              <div
-                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
-              >
-                {{ $t("home.experience2.title") }}
-              </div>
-              <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-              <div
-                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
-              >
-                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
-                  {{ $t("home.experience2.company") }} |
-                  {{ $t("home.experience2.location") }}
-                </div>
-                <time
-                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
-                  >{{ $t("home.experience2.period") }}</time
-                >
-              </div>
-              <!-- Content -->
-              <div class="text-gray-300">
-                {{ $t("home.experience2.description") }}
-              </div>
-            </div>
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-              <!-- Purple label -->
-              <div
-                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
-              >
-                {{ $t("home.experience3.title") }}
-              </div>
-              <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-              <div
-                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
-              >
-                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
-                  {{ $t("home.experience3.company") }} |
-                  {{ $t("home.experience3.location") }}
-                </div>
-                <time
-                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
-                  >{{ $t("home.experience3.period") }}</time
-                >
-              </div>
-              <!-- Content -->
-              <div class="text-gray-300">
-                {{ $t("home.experience3.description") }}
-              </div>
-            </div>
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-              <!-- Purple label -->
-              <div
-                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
-              >
-                {{ $t("home.experience4.title") }}
-              </div>
-              <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-              <div
-                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
-              >
-                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
-                  {{ $t("home.experience4.company") }} |
-                  {{ $t("home.experience4.location") }}
-                </div>
-                <time
-                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
-                  >{{ $t("home.experience4.period") }}</time
-                >
-              </div>
-              <!-- Content -->
-              <div class="text-gray-300">
-                {{ $t("home.experience4.description") }}
-              </div>
-            </div>
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-              <!-- Purple label -->
-              <div
-                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
-              >
-                {{ $t("home.experience5.title") }}
-              </div>
-              <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-              <div
-                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
-              >
-                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
-                  {{ $t("home.experience5.company") }} |
-                  {{ $t("home.experience5.location") }}
-                </div>
-                <time
-                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
-                  >{{ $t("home.experience5.period") }}</time
-                >
-              </div>
-              <!-- Content -->
-              <div class="text-gray-300">
-                {{ $t("home.experience5.description") }}
-              </div>
-            </div>
-            <div class="relative pl-8 sm:pl-32 py-6 group">
-              <!-- Purple label -->
-              <div
-                class="font-caveat font-medium text-2xl text-indigo-400 mb-1 sm:mb-0"
-              >
-                {{ $t("home.experience6.title") }}
-              </div>
-              <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-              <div
-                class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 w-full group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-gray-600 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-400 after:border-4 after:box-content after:border-gray-800 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5"
-              >
-                <div class="text-xl font-bold text-white mb-2 sm:mb-0 flex-shrink-0">
-                  {{ $t("home.experience6.company") }} |
-                  {{ $t("home.experience6.location") }}
-                </div>
-                <time
-                  class="inline-flex items-center justify-center text-sm font-semibold px-3 py-1 min-w-fit text-emerald-300 bg-emerald-900 rounded-full whitespace-nowrap flex-shrink-0"
-                  >{{ $t("home.experience6.period") }}</time
-                >
-              </div>
-              <!-- Content -->
-              <div class="text-gray-300">
-                {{ $t("home.experience6.description") }}
-              </div>
-            </div>
+            <!-- End: Vertical Timeline #1 -->
           </div>
-          <!-- End: Vertical Timeline #1 -->
         </div>
       </div>
     </section>
@@ -419,14 +426,15 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="card p-6 hover:shadow-lg transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Genome Analysis Tool</h3>
+            <h3 class="text-xl font-semibold mb-2">
+              Algorithms de séquençage avec R
+            </h3>
             <p class="text-gray-600 mb-4">
-              A comprehensive tool for analyzing genomic sequences with advanced
-              ML algorithms.
+              De zero aux algorithmes de séquençage de l'ADN avec R.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs"
-                >Python</span
+                >R</span
               >
               <span
                 class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs"
@@ -434,53 +442,7 @@
               >
             </div>
             <a
-              href="/projects"
-              class="text-blue-600 hover:text-blue-800 font-medium"
-              >View Project →</a
-            >
-          </div>
-
-          <div class="card p-6 hover:shadow-lg transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">ML Genomics Pipeline</h3>
-            <p class="text-gray-600 mb-4">
-              Machine learning pipeline for variant calling and disease
-              prediction.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs"
-                >TensorFlow</span
-              >
-              <span class="px-2 py-1 bg-pink-100 text-pink-800 rounded text-xs"
-                >Genomics</span
-              >
-            </div>
-            <a
-              href="/projects"
-              class="text-blue-600 hover:text-blue-800 font-medium"
-              >View Project →</a
-            >
-          </div>
-
-          <div class="card p-6 hover:shadow-lg transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">
-              Data Visualization Dashboard
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Interactive dashboard for exploring and visualizing genomic
-              datasets.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs"
-                >JavaScript</span
-              >
-              <span class="px-2 py-1 bg-cyan-100 text-cyan-800 rounded text-xs"
-                >React</span
-              >
-            </div>
-            <a
-              href="/projects"
+              href="/projects/algorithms-for-Sequencing-from-scratch-with-R"
               class="text-blue-600 hover:text-blue-800 font-medium"
               >View Project →</a
             >
@@ -511,71 +473,119 @@
             {{ $t("home.courseraSpecialization.title") }}
           </h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.courseraSpecialization.course1.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course1.number") }} · {{ $t("home.courseraSpecialization.course1.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.courseraSpecialization.course1.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.courseraSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.courseraSpecialization.course1.number") }} ·
+                {{ $t("home.courseraSpecialization.course1.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
 
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.courseraSpecialization.course2.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course2.number") }} · {{ $t("home.courseraSpecialization.course2.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.courseraSpecialization.course2.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.courseraSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.courseraSpecialization.course2.number") }} ·
+                {{ $t("home.courseraSpecialization.course2.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
 
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.courseraSpecialization.course3.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course3.number") }} · {{ $t("home.courseraSpecialization.course3.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.courseraSpecialization.course3.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.courseraSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.courseraSpecialization.course3.number") }} ·
+                {{ $t("home.courseraSpecialization.course3.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
 
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.courseraSpecialization.course4.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course4.number") }} · {{ $t("home.courseraSpecialization.course4.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.courseraSpecialization.course4.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.courseraSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.courseraSpecialization.course4.number") }} ·
+                {{ $t("home.courseraSpecialization.course4.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
 
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.courseraSpecialization.course5.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course5.number") }} · {{ $t("home.courseraSpecialization.course5.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.courseraSpecialization.course5.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.courseraSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.courseraSpecialization.course5.number") }} ·
+                {{ $t("home.courseraSpecialization.course5.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
 
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.courseraSpecialization.course6.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.courseraSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.courseraSpecialization.course6.number") }} · {{ $t("home.courseraSpecialization.course6.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.courseraSpecialization.course6.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.courseraSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.courseraSpecialization.course6.number") }} ·
+                {{ $t("home.courseraSpecialization.course6.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
           </div>
         </div>
 
@@ -585,82 +595,138 @@
             {{ $t("home.bioinformaticsSpecialization.title") }}
           </h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.bioinformaticsSpecialization.course1.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course1.number") }} · {{ $t("home.bioinformaticsSpecialization.course1.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.bioinformaticsSpecialization.course1.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.bioinformaticsSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.bioinformaticsSpecialization.course1.number") }} ·
+                {{ $t("home.bioinformaticsSpecialization.course1.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
 
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.bioinformaticsSpecialization.course2.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course2.number") }} · {{ $t("home.bioinformaticsSpecialization.course2.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.bioinformaticsSpecialization.course2.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.bioinformaticsSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.bioinformaticsSpecialization.course2.number") }} ·
+                {{ $t("home.bioinformaticsSpecialization.course2.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
 
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.bioinformaticsSpecialization.course3.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course3.number") }} · {{ $t("home.bioinformaticsSpecialization.course3.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.bioinformaticsSpecialization.course3.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.bioinformaticsSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.bioinformaticsSpecialization.course3.number") }} ·
+                {{ $t("home.bioinformaticsSpecialization.course3.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
 
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.bioinformaticsSpecialization.course4.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course4.number") }} · {{ $t("home.bioinformaticsSpecialization.course4.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.bioinformaticsSpecialization.course4.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.bioinformaticsSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.bioinformaticsSpecialization.course4.number") }} ·
+                {{ $t("home.bioinformaticsSpecialization.course4.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
 
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.bioinformaticsSpecialization.course5.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course5.number") }} · {{ $t("home.bioinformaticsSpecialization.course5.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.bioinformaticsSpecialization.course5.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.bioinformaticsSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.bioinformaticsSpecialization.course5.number") }} ·
+                {{ $t("home.bioinformaticsSpecialization.course5.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
 
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.bioinformaticsSpecialization.course6.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course6.number") }} · {{ $t("home.bioinformaticsSpecialization.course6.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.bioinformaticsSpecialization.course6.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.bioinformaticsSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.bioinformaticsSpecialization.course6.number") }} ·
+                {{ $t("home.bioinformaticsSpecialization.course6.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
 
-          <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold mb-2 text-white">
-              {{ $t("home.bioinformaticsSpecialization.course7.name") }}
-            </h3>
-            <p class="text-blue-400 mb-2">{{ $t("home.bioinformaticsSpecialization.provider") }}</p>
-            <p class="text-sm text-gray-400 mb-4">{{ $t("home.bioinformaticsSpecialization.course7.number") }} · {{ $t("home.bioinformaticsSpecialization.course7.status") }}</p>
-            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
-              {{ $t("home.viewCertificate") }} →
-            </a>
-          </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-2 text-white">
+                {{ $t("home.bioinformaticsSpecialization.course7.name") }}
+              </h3>
+              <p class="text-blue-400 mb-2">
+                {{ $t("home.bioinformaticsSpecialization.provider") }}
+              </p>
+              <p class="text-sm text-gray-400 mb-4">
+                {{ $t("home.bioinformaticsSpecialization.course7.number") }} ·
+                {{ $t("home.bioinformaticsSpecialization.course7.status") }}
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 text-sm font-medium"
+              >
+                {{ $t("home.viewCertificate") }} →
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -761,6 +827,8 @@
 </template>
 
 <script setup>
+import sam1Image from "~/assets/images/sam2.jpg";
+
 const form = ref({
   name: "",
   email: "",

@@ -42,7 +42,7 @@
       "degree": "Master's in Biostatistics with thesis",
       "institution": "Université Laval, Québec, Canada",
       "period": "January 2022 - January 2025",
-      "focus": "Advanced statistical methods, statistical modeling, high-dimensional data analysis, scientific programming (R, Python, Bash)"
+      "focus": "Computational genomics, Epidemiology, advanced statistical methods, statistical modeling, high-dimensional data analysis, scientific programming (R, Python, Bash)"
     },
     "education2": {
       "degree": "Bachelor's in Statistics: Statistical Engineering",
@@ -54,7 +54,7 @@
       "title": "Data Manager and Data Analyst",
       "company": "ROSEPH",
       "location": "Québec, Québec, Canada",
-      "period": "Feb 2022",
+      "period": "Since Feb 2022",
       "description": "Design and implementation of data collection and analysis pipelines for projects. Development of detailed statistical analysis plans (SAP) including missing data management. Statistical analysis of data and manipulation of large multi-source databases with R and Excel to ensure data integrity and quality. Creation of interactive dynamic dashboards (R Shiny) for communicating complex results to non-technical audiences. Development of automated reporting tools with R and Power Platform, reducing report generation time by nearly 40%. Close collaboration with multidisciplinary teams to define analytical needs and translate scientific questions into actionable statistical analyses."
     },
     "experience2": {

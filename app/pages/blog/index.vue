@@ -1,6 +1,17 @@
 <template>
   <div class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold mb-8">Blog</h1>
+    <h1 class="text-4xl font-bold mb-8">
+      Blog
+      <span v-if="selectedFilter === 'Bioinformatics'">
+        : {{ $t("blog.bioinformatics") }}</span
+      >
+      <span v-if="selectedFilter === 'Data Science'">
+        : {{ $t("blog.dataScience") }}</span
+      >
+      <span v-if="selectedFilter === 'Data Science & health'">
+        : Data Science & health</span
+      >
+    </h1>
 
     <!-- Filter buttons -->
     <div class="flex flex-wrap gap-3 mb-8">
@@ -9,7 +20,7 @@
         :key="filter"
         @click="selectedFilter = filter"
         :class="[
-          'px-4 py-2 rounded-lg font-medium transition-colors',
+          'px-4 py-2 rounded-lg font-medium transition-colors cursor-pointer',
           selectedFilter === filter
             ? 'bg-blue-600 text-white'
             : 'bg-gray-200 hover:bg-gray-300 text-gray-800',
@@ -49,10 +60,13 @@
             {{ post.description }}
           </p>
 
-          <div class="flex items-center text-sm text-gray-500">
+          <div class="flex items-center justify-between text-sm text-gray-500">
             <time :datetime="post.date">
               {{ formatDate(post.date) }}
             </time>
+            <span v-if="post._path" class="text-blue-600 hover:text-blue-800">
+              Read more →
+            </span>
           </div>
         </div>
       </article>
@@ -80,21 +94,12 @@ const selectedFilter = ref("All");
 // Mock blog posts data - replace with actual data fetching
 const posts = ref([
   {
-    _path: "/blog/data-science/machine-learning-genomics",
-    title: "Machine Learning in Genomics: A Comprehensive Guide",
+    _path: "/blog/bioinformatics/data-science-and-genomics-episode-1",
+    title: "La data science et la génomique : Episode 1",
     description:
-      "Exploring how machine learning algorithms can be applied to genomic data analysis, from variant calling to disease prediction.",
-    date: "2024-01-15",
-    tags: ["machine-learning", "genomics", "python", "data-science"],
-    category: "data-science",
-  },
-  {
-    _path: "/blog/bioinformatics/genome-assembly-techniques",
-    title: "Modern Genome Assembly Techniques",
-    description:
-      "Comparing different genome assembly algorithms and their applications in de novo sequencing projects.",
-    date: "2024-01-20",
-    tags: ["genomics", "assembly", "bioinformatics", "sequencing"],
+      "Pour au moins 99 % des personnes qui liront cet article, il est fort probable que le domaine de la data science ne vous soit pas étranger. Dans le cas contraire, en quelques mots la data science est une discipline qui permet ",
+    date: "2025-11-30",
+    tags: ["genomics", "bioinformatics", "data-science"],
     category: "bioinformatics",
   },
 ]);
