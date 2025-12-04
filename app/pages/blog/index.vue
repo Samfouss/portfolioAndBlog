@@ -102,6 +102,15 @@ const posts = ref([
     tags: ["genomics", "bioinformatics", "data-science"],
     category: "bioinformatics",
   },
+  {
+    _path: "/blog/health/biology-for-data-science-episode-2",
+    title: "La data science et la génomique : Episode 2",
+    description:
+      "Si l’on prend le corps humain comme une entreprise avec des usines, voici ce qu'il faudrait retenir.",
+    date: "2025-12-03",
+    tags: ["genomics", "bioinformatics", "data-science", "health"],
+    category: "bioinformatics",
+  },
 ]);
 
 // Computed property to filter posts based on selected filter

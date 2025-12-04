@@ -8,6 +8,13 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+      ]
+    }
+  },
   i18n: {
     locales: [
       { code: "en", iso: "en-US", name: "English", file: "en.json" },

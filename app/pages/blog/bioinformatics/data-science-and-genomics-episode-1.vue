@@ -34,9 +34,14 @@
         <div class="prose prose-lg dark:prose-invert max-w-none">
           <!-- Introduction Section -->
           <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-900">
-              Qu'est-ce que la data science ?
-            </h2>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 bg-blue-100 rounded-lg">
+                <BarChart3 class="h-8 w-8 text-blue-600" />
+              </div>
+              <h2 class="text-3xl font-bold text-gray-900">
+                Qu'est-ce que la data science ?
+              </h2>
+            </div>
             <div class="space-y-4 text-gray-700 leading-relaxed">
               <p>
                 Pour au moins 99 % des personnes qui liront cet article, il est
@@ -59,9 +64,14 @@
 
           <!-- Genomics Section -->
           <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-900">
-              Qu'est-ce que la Génomique ?
-            </h2>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 bg-green-100 rounded-lg">
+                <Dna class="h-8 w-8 text-green-600" />
+              </div>
+              <h2 class="text-3xl font-bold text-gray-900">
+                Qu'est-ce que la Génomique ?
+              </h2>
+            </div>
             <div class="space-y-4 text-gray-700 leading-relaxed">
               <p>
                 La génomique est une discipline qui s'intéresse à l'étude du
@@ -85,9 +95,14 @@
 
           <!-- Data Science and Genomics Section -->
           <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-900">
-              Que signifie "data science et génomique" ?
-            </h2>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 bg-purple-100 rounded-lg">
+                <Sparkles class="h-8 w-8 text-purple-600" />
+              </div>
+              <h2 class="text-3xl font-bold text-gray-900">
+                Que signifie "data science et génomique" ?
+              </h2>
+            </div>
 
             <div class="my-8 flex justify-center">
               <img
@@ -125,9 +140,14 @@
 
           <!-- NGS Revolution Section -->
           <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-900">
-              La révolution du NGS
-            </h2>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 bg-yellow-100 rounded-lg">
+                <Zap class="h-8 w-8 text-yellow-600" />
+              </div>
+              <h2 class="text-3xl font-bold text-gray-900">
+                La révolution du NGS
+              </h2>
+            </div>
             <div class="space-y-4 text-gray-700 leading-relaxed">
               <p>
                 Il est impossible de parler de data science et de génomique sans
@@ -156,9 +176,14 @@
 
           <!-- Data Scientist Work Section -->
           <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-900">
-              À quoi ressemble le travail d'un data scientist en génomique ?
-            </h2>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 bg-indigo-100 rounded-lg">
+                <UserCog class="h-8 w-8 text-indigo-600" />
+              </div>
+              <h2 class="text-3xl font-bold text-gray-900">
+                À quoi ressemble le travail d'un data scientist en génomique ?
+              </h2>
+            </div>
             <div class="space-y-4 text-gray-700 leading-relaxed">
               <p>
                 Le travail du data scientiste en génomique commence par une
@@ -185,9 +210,14 @@
 
           <!-- Data Processing Section -->
           <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-900">
-              Le traitement des données
-            </h2>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="p-3 bg-cyan-100 rounded-lg">
+                <Settings class="h-8 w-8 text-cyan-600" />
+              </div>
+              <h2 class="text-3xl font-bold text-gray-900">
+                Le traitement des données
+              </h2>
+            </div>
 
             <div class="my-8 flex justify-center">
               <img
@@ -237,6 +267,15 @@
 </template>
 
 <script setup>
+import { 
+  BarChart3, 
+  Dna, 
+  Sparkles, 
+  Zap, 
+  UserCog, 
+  Settings,
+  Database
+} from 'lucide-vue-next'
 import image1 from "~/assets/images/image1.PNG";
 import image2 from "~/assets/images/image2.PNG";
 
