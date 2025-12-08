@@ -36,7 +36,7 @@
         v-for="post in filteredPosts"
         :key="post._path"
         class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
-        @click="navigateTo(post._path)"
+        @click="handleNavigate(post._path)"
       >
         <div class="p-6">
           <div class="flex flex-wrap gap-2 mb-3">
@@ -111,6 +111,15 @@ const posts = ref([
     tags: ["genomics", "bioinformatics", "data-science", "health"],
     category: "bioinformatics",
   },
+  {
+    _path: "/blog/health/biology-database-for-data-science-episode-3",
+    title: "La data science et la génomique : Episode 3",
+    description:
+      "Les bases de données biologiques : où trouve t-on les données biologiques ?",
+    date: "2025-12-03",
+    tags: ["genomics", "bioinformatics", "data-science", "health"],
+    category: "bioinformatics",
+  },
 ]);
 
 // Computed property to filter posts based on selected filter
@@ -177,10 +186,21 @@ function formatDate(dateString: string): string {
   });
 }
 
-// Navigate function
-function navigateTo(path: string) {
-  // In a real Nuxt app, this would use useRouter or navigateTo
-  window.location.href = path;
+// Navigate function - uses route name instead of path to avoid mistakes
+const router = useRouter();
+async function handleNavigate(path: string) {
+  try {
+    const route = router.resolve(path);
+    if (route.name) {
+      await navigateTo({ name: route.name.toString() });
+    } else {
+      // Fallback to path if name is not available
+      await navigateTo(path);
+    }
+  } catch (error) {
+    // Fallback to path if resolution fails
+    await navigateTo(path);
+  }
 }
 </script>
 

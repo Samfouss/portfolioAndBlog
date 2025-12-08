@@ -67,7 +67,7 @@
       <article
         v-for="project in filteredProjects"
         :key="project._path"
-        @click="navigateTo(project._path)"
+        @click="handleNavigate(project._path)"
         class="card overflow-hidden hover:shadow-xl transition-shadow duration-300 rounded-lg shadow-md cursor-pointer"
       >
         <div class="h-48 overflow-hidden">
@@ -249,10 +249,21 @@ function formatDate(dateString: string): string {
   });
 }
 
-// Navigate function
-function navigateTo(path: string) {
-  // In a real Nuxt app, this would use useRouter or navigateTo
-  window.location.href = path;
+// Navigate function - uses route name instead of path to avoid mistakes
+const router = useRouter();
+async function handleNavigate(path: string) {
+  try {
+    const route = router.resolve(path);
+    if (route.name) {
+      await navigateTo({ name: route.name.toString() });
+    } else {
+      // Fallback to path if name is not available
+      await navigateTo(path);
+    }
+  } catch (error) {
+    // Fallback to path if resolution fails
+    await navigateTo(path);
+  }
 }
 </script>
 
