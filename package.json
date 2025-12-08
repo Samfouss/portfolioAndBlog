@@ -6,7 +6,6 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "build:netlify": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
