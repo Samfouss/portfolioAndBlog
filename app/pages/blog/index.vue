@@ -103,7 +103,7 @@ const posts = ref([
     category: "bioinformatics",
   },
   {
-    _path: "/blog/health/biology-for-data-science-episode-2",
+    _path: "/blog/health/data-science-and-genomics-episode-2",
     title: "La data science et la génomique : Episode 2",
     description:
       "Si l’on prend le corps humain comme une entreprise avec des usines, voici ce qu'il faudrait retenir.",
@@ -112,10 +112,19 @@ const posts = ref([
     category: "bioinformatics",
   },
   {
-    _path: "/blog/health/biology-database-for-data-science-episode-3",
+    _path: "/blog/health/data-science-and-genomics-episode-3",
     title: "La data science et la génomique : Episode 3",
     description:
       "Les bases de données biologiques : où trouve t-on les données biologiques ?",
+    date: "2025-12-03",
+    tags: ["genomics", "bioinformatics", "data-science", "health"],
+    category: "bioinformatics",
+  },
+  {
+    _path: "/blog/bioinformatics/data-science-and-genomics-episode-4",
+    title: "La data science et la génomique : Episode 4",
+    description:
+      "Le « shell Unix » pour la data science et la génomique : les commandes de bases à connaitre pour prendre en main le bash !",
     date: "2025-12-03",
     tags: ["genomics", "bioinformatics", "data-science", "health"],
     category: "bioinformatics",
