@@ -38,6 +38,34 @@
             </div>
           </section>
 
+          <!-- Introduction Example Section -->
+          <section class="mb-12">
+            <div
+              class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 md:p-10 border border-blue-100"
+            >
+              <div class="flex items-start gap-4 mb-4">
+                <div class="flex-shrink-0 p-3 bg-blue-100 rounded-lg">
+                  <Terminal class="h-6 w-6 text-blue-600" />
+                </div>
+                <div class="flex-1">
+                  <p class="text-gray-700 leading-relaxed mb-4">
+                    Dans un fichier de données contenant les gènes d'une espèce
+                    donnée, on aimerait connaître les 10 gènes les plus fréquents.
+                    Voici comment aujourd'hui je récupèrerais cette information :
+                  </p>
+                  <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                    <p class="text-green-400 font-mono text-sm">
+                      cut -f1 genes.txt | sort | uniq -c | sort -nr | head -n 10
+                    </p>
+                  </div>
+                  <p class="text-gray-700 leading-relaxed">
+                    C'est une combinaison de commandes du « shell Unix ».
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <!-- What is Unix Section -->
           <section class="mb-12">
             <div class="flex items-center gap-4 mb-6">
@@ -1376,6 +1404,353 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- AWK Section -->
+                <div class="mt-8">
+                  <h5 class="text-lg font-bold text-gray-900 mb-4">
+                    e. Le langage AWK pour le traitement de données
+                  </h5>
+                  <p class="text-gray-700 mb-4">
+                    AWK est un langage de programmation puissant spécialement
+                    conçu pour le traitement et l'analyse de fichiers texte
+                    structurés (tableaux, fichiers délimités). Il est
+                    particulièrement utile pour manipuler des données
+                    biologiques comme des fichiers CSV, TSV, VCF, BED, GTF, etc.
+                  </p>
+
+                  <!-- AWK Structure -->
+                  <div class="mb-6">
+                    <p class="font-semibold text-gray-900 mb-2">
+                      Structure de base d'une commande AWK :
+                    </p>
+                    <div class="bg-gray-900 rounded-lg p-4">
+                      <p class="text-green-400 font-mono text-sm">
+                        awk 'motif { action }' fichier.txt
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- AWK Variables -->
+                  <div class="mb-6">
+                    <p class="font-semibold text-gray-900 mb-3">
+                      Variables spéciales importantes :
+                    </p>
+                    <div
+                      class="bg-gray-50 rounded-lg p-4 border border-gray-200"
+                    >
+                      <ul
+                        class="list-disc list-outside space-y-2 ml-6 text-sm text-gray-700"
+                      >
+                        <li>
+                          <code class="bg-gray-200 px-1 rounded">$0</code> : La
+                          ligne entière
+                        </li>
+                        <li>
+                          <code class="bg-gray-200 px-1 rounded"
+                            >$1, $2, $3...</code
+                          >
+                          : Les colonnes (champs) 1, 2, 3, etc.
+                        </li>
+                        <li>
+                          <code class="bg-gray-200 px-1 rounded">NR</code> :
+                          Numéro de la ligne courante (Number of Record)
+                        </li>
+                        <li>
+                          <code class="bg-gray-200 px-1 rounded">NF</code> :
+                          Nombre de champs dans la ligne courante (Number of
+                          Fields)
+                        </li>
+                        <li>
+                          <code class="bg-gray-200 px-1 rounded">FS</code> :
+                          Séparateur de champs (Field Separator), par défaut
+                          espace/tab
+                        </li>
+                        <li>
+                          <code class="bg-gray-200 px-1 rounded">OFS</code> :
+                          Séparateur de sortie (Output Field Separator)
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- AWK Examples -->
+                  <div class="mb-6">
+                    <p class="font-semibold text-gray-900 mb-3">
+                      Exemples pratiques :
+                    </p>
+
+                    <!-- Basic AWK examples -->
+                    <div class="mb-4">
+                      <div class="bg-gray-900 rounded-lg overflow-hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                          <div class="p-4 border-r border-gray-700 space-y-2">
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{print}' data.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{print $1}' genes.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{print $1, $3}' tableau.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{print $1 "\t" $3}' data.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk -F',' '{print $1, $2}' data.csv
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '$3 > 100' scores.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{sum += $2} END {print sum}' valeurs.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{sum += $2; count++} END {print sum/count}'
+                              valeurs.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk 'END {print NR}' fichier.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '/gene/ {print}' sequences.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '$2 == "protein" {print $1}' annotations.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk 'NR>=10 && NR<=20' fichier.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk 'NR > 1 {print}' data.csv
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{print NR "\t" $0}' fichier.txt
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk 'length($0) > 50' sequences.txt
+                            </p>
+                          </div>
+                          <div class="p-4 bg-gray-800 space-y-2">
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Afficher toutes les lignes d'un fichier
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Afficher la première colonne
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Afficher les colonnes 1 et 3
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Afficher les colonnes avec un séparateur
+                              personnalisé
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Traiter un fichier CSV (séparateur virgule)
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Afficher les lignes où la 3ème colonne est
+                              supérieure à 100
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Calculer la somme d'une colonne
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Calculer la moyenne d'une colonne
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Compter le nombre de lignes
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Afficher les lignes avec un motif spécifique
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Afficher les lignes avec condition sur colonne
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Afficher les lignes de 10 à 20
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Ignorer la première ligne (en-tête)
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Ajouter un numéro de ligne
+                            </p>
+                            <p class="text-gray-300 font-mono text-sm">
+                              # Filtrer par longueur de ligne
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Advanced AWK examples -->
+                    <div class="mb-4">
+                      <p class="font-semibold text-gray-900 mb-3 text-sm">
+                        Exemples avancés :
+                      </p>
+                      <div class="bg-gray-900 rounded-lg p-6">
+                        <div class="space-y-4">
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Calculer la longueur de chaque séquence
+                              (fichiers FASTA)
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '/^>/ {if (seq) print name "\t" length(seq);
+                              name=$1; seq=""} !/^>/ {seq = seq $0} END {print
+                              name "\t" length(seq)}' sequences.fasta
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Compter les occurrences dans une colonne
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{count[$1]++} END {for (item in count) print
+                              item, count[item]}' data.txt
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Calculer des statistiques par groupe
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{sum[$1] += $2; count[$1]++} END {for (group
+                              in sum) print group, sum[group]/count[group]}'
+                              grouped_data.txt
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Remplacer un séparateur (TSV vers CSV)
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk 'BEGIN {OFS=","} {$1=$1; print}' data.tsv
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Filtrer les lignes dupliquées (garder la
+                              première occurrence)
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '!seen[$1]++' data.txt
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Extraire des informations de fichiers GTF/GFF
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '$3 == "gene" {print $1, $4, $5, $9}'
+                              annotations.gtf
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Calculer le GC content de séquences
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '/^>/ {if (seq) {gc=gsub(/[GCgc]/,"",seq);
+                              print name "\t" gc/length(seq)*100}; name=$1;
+                              seq=""} !/^>/ {seq = seq $0} END
+                              {gc=gsub(/[GCgc]/,"",seq); print name "\t"
+                              gc/length(seq)*100}' sequences.fasta
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Convertir un format de fichier
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk -F'\t' 'BEGIN {print "ID,Gene,Expression"}
+                              {print $1 "," $2 "," $3}' data.tsv
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Filtrer par plusieurs conditions
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '$3 > 50 && $4 < 100 && $2 == "chromosome1"'
+                              variants.vcf
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Calculer des pourcentages
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{total += $2} END {for (i=1; i<=NR; i++)
+                              print $1, ($2/total)*100}' data.txt
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Bioinformatics examples -->
+                    <div class="mb-4">
+                      <p class="font-semibold text-gray-900 mb-3 text-sm">
+                        Exemples avancés pour la bioinformatique :
+                      </p>
+                      <div class="bg-gray-900 rounded-lg p-6">
+                        <div class="space-y-4">
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Extraire les séquences d'une longueur spécifique
+                              d'un fichier FASTA
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '/^>/ {header=$0; seq=""; next} {seq=seq $0}
+                              length(seq)==100 {print header "\n" seq;
+                              header=""; seq=""}' sequences.fasta
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Convertir FASTQ en FASTA
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk 'NR%4==1 {print ">" substr($0,2)} NR%4==2
+                              {print}' sequences.fastq > sequences.fasta
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Filtrer les variants par qualité dans un fichier
+                              VCF
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '$6 > 30' variants.vcf
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Calculer la couverture moyenne par chromosome
+                              dans un fichier BED
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{sum[$1] += $3-$2; count[$1]++} END {for (chr
+                              in sum) print chr, sum[chr]/count[chr]}'
+                              coverage.bed
+                            </p>
+                          </div>
+                          <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                              # Extraire les coordonnées génomiques dans un
+                              format spécifique
+                            </p>
+                            <p class="text-green-400 font-mono text-sm">
+                              awk '{print $1 ":" $2 "-" $3}' regions.bed
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <!-- Tip section -->
@@ -1388,7 +1763,7 @@
                   particulier, la commande
                   <code class="bg-blue-100 px-2 py-1 rounded">man</code> suivie
                   du nom de la commande (ex :
-                  <code class="bg-blue-100 px-2 py-1 rounded">man cd</code>)
+                  <code class="bg-blue-100 px-2 py-1 rounded">man awk</code>)
                   affiche le manuel d'utilisation.
                 </p>
               </div>
@@ -1466,14 +1841,15 @@
                 <div class="flex-1">
                   <p class="text-gray-700 leading-relaxed text-lg">
                     La force du Bash dans le traitement de données biologiques
-                    volumineuses réside dans la combinaison intelligente et judicieuse
-                    de commandes simples pour accomplir des tâches en apparence
-                    complexes. Ainsi, même si ces commandes peuvent sembler basiques
-                    au premier abord, elles constituent la base de pipelines puissants
-                    et reproductibles pour l'analyse et le traitement des données
-                    génomiques. Avec l'expérience et la pratique de projets réels, on
-                    réalise pleinement à quel point leur maîtrise devient un atout
-                    essentiel pour travailler efficacement en bio-informatique et plus
+                    volumineuses réside dans la combinaison intelligente et
+                    judicieuse de commandes simples pour accomplir des tâches en
+                    apparence complexes. Ainsi, même si ces commandes peuvent
+                    sembler basiques au premier abord, elles constituent la base
+                    de pipelines puissants et reproductibles pour l'analyse et
+                    le traitement des données génomiques. Avec l'expérience et
+                    la pratique de projets réels, on réalise pleinement à quel
+                    point leur maîtrise devient un atout essentiel pour
+                    travailler efficacement en bio-informatique et plus
                     particulièrement en génomique.
                   </p>
                 </div>
